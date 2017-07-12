@@ -13,10 +13,10 @@ RSpec.describe "A user can view house member information for Colorado" do
     expect(page).to have_selector(".member", count: 7)
 
     within first(".member") do
-      expect(page).to have_selector(".member_name")
-      expect(page).to have_selector(".member_role")
-      expect(page).to have_selector(".member_party")
-      expect(page).to have_selector(".member_district")
+      expect(page).to have_selector(".member-name")
+      expect(page).to have_selector(".member-role")
+      expect(page).to have_selector(".member-party")
+      expect(page).to have_selector(".member-district")
     end
   end
 end
