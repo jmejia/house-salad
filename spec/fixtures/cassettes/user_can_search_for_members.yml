@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.propublica.org/congress/v1/members/?chamber=house&state=CO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.12.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '42'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 12 Jul 2017 16:48:16 GMT
+      X-Amzn-Requestid:
+      - e724a782-6721-11e7-81fb-5b0ec7ab77d0
+      X-Amzn-Errortype:
+      - MissingAuthenticationTokenException
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 24249c4e855dc87b99d6f2dcc8bbb7fb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - QyAF8juiT0Nkz0I4TCB__7B1d30PAokRcVy249nkZaZZfDpxdbojRA==
+    body:
+      encoding: UTF-8
+      string: '{"message":"Missing Authentication Token"}'
+    http_version: 
+  recorded_at: Wed, 12 Jul 2017 16:48:16 GMT
+recorded_with: VCR 3.0.3

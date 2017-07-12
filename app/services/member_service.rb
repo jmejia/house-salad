@@ -5,7 +5,7 @@ class MemberService
   end
 
   def find_by_state
-    response = conn.get "/congress/v1/members/?chamber=house&state=#{state}"
+    response = conn.get "/congress/v1/members/?chamber=house&state=CO"
     conn.headers = {'x-api-key' => "#{ENV[CONGRESS_API_KEY]}"}
     JSON.parse(response.body, symbolize_names:true)[:members]
   end
