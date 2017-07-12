@@ -19,6 +19,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'shoulda-matchers'

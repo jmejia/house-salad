@@ -6,7 +6,8 @@ class MemberService
 
   def find_by_state
     response = conn.get "/congress/v1/members/?chamber=house&state=CO"
-    conn.headers = {'x-api-key' => "#{ENV[CONGRESS_API_KEY]}"}
+    conn.headers = {'x-api-key' => "#{ENV["CONGRESS_API_KEY"]}"}
+    binding.pry
     JSON.parse(response.body, symbolize_names:true)[:members]
   end
 
@@ -16,4 +17,11 @@ class MemberService
 
   private
     attr_reader :filter, :conn
+
+    def filter
+      {
+        chamber: "house",
+        state: "CO"
+      }
+    end
 end
